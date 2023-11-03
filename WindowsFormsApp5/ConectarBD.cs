@@ -147,7 +147,7 @@ namespace WindowsFormsApp5
                 conexion.Open();
                 mb.ExportInfo.AddCreateDatabase = true;
                 mb.ExportToFile(nombreFichero);
-                
+                System.IO.File.AppendAllText("C:\\seguridad\\total.sql", System.IO.File.ReadAllText(nombreFichero));
 
                 conexion.Close();
             }
